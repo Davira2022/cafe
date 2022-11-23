@@ -10,9 +10,7 @@ export const dishesSlice = createSlice({
             state.selectedCategory = action.payload;
         }
     }
-
 })
-
 
 export const getSelectedCategory = state => state.dishes.selectedCategory;
 export const { filterCategory } = dishesSlice.actions;

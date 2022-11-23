@@ -1,3 +1,4 @@
+import React from 'react';
 const ChangeQuantity = ({quantity, setQuantity}) => {
 
     const addQuantity = () => {
@@ -13,9 +14,9 @@ const ChangeQuantity = ({quantity, setQuantity}) => {
 
     return (
         <div>
-            <button onClick={addQuantity}>+</button>
-            <span>{quantity}</span>
-            <button onClick={removeQuantity}>-</button>
+            <button className="plus" onClick={removeQuantity}>-</button>
+            <span>{ quantity }</span>
+            <button className="plus" onClick={addQuantity}>+</button>
         </div>
     )
 }

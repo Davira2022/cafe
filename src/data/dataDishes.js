@@ -2,90 +2,90 @@ const dataDishes = [
 
     {
     id: 1,
-    price: 25,
-    img: 'pasta',
-    name: 'Pasta',
-    category: 'ITALIAN'
+    price: 2,
+    img: 'assorted jelly',
+    name: 'Assorted Jellies',
+    category: 'AVAILABLE'
   },
 
   {
     id: 2,
-    price: 50,
-    img: 'shrimp',
-    name: 'Shrimp',
-    category: 'SEAFOOD'
+    price: 5,
+    img: 'candied fruit jelly',
+    name: 'Candied Fruit Jelly',
+    category: 'AVAILABLE'
   },
 
   {
     id: 3,
-    price: 30,
-    img: 'salmon',
-    name: 'Salmon',
-    category: 'SEAFOOD'
+    price: 3,
+    img: 'cheesecake',
+    name: 'Cheesecake',
+    category: 'PREORDER'
   },
 
   {
     id: 4,
-    price: 40,
-    img: 'baked-salmon',
-    name: 'Baked Salmon',
-    category: 'SEAFOOD'
+    price: 4,
+    img: 'gingerbread',
+    name: 'Gingerbread',
+    category: 'AVAILABLE'
   },
 
   {
     id: 5,
-    price: 15,
-    img: 'cheese-balls',
-    name: 'Cheese balls',
-    category: 'APPETIZERS'
+    price: 1,
+    img: 'lollipop',
+    name: 'Lollipop',
+    category: 'AVAILABLE'
   },
   
   {
     id: 6,
-    price: 20,
-    img: 'easy-pasta',
-    name: 'Easy Pasta',
-    category: 'ITALIAN'
+    price: 2,
+    img: 'macarons',
+    name: 'Macarons',
+    category: 'PREORDER'
   },
   
   {
     id: 7,
-    price: 25,
-    img: 'spag-tomato',
-    name: 'Spaghetti',
-    category: 'ITALIAN'
+    price: 2,
+    img: 'muffin',
+    name: 'Muffin',
+    category: 'PREORDER'
   },
   
   {
     id: 8,
-    price: 20,
-    img: 'mixed-pizza',
-    name: 'Pizza',
-    category: 'ITALIAN'
+    price: 2,
+    img: 'Pavlova',
+    name: 'Pavlova',
+    category: 'PREORDER'
   },
 
   {
     id: 9,
-    price: 20,
-    img: 'spring-rolls',
-    name: 'Spring Rolls',
-    category: 'APPETIZERS'
+    price: 2,
+    img: 'popsicle',
+    name: 'Popsicle',
+    category: 'PREORDER'
   },
 
   {
     id: 10,
-    price: 15,
-    img: 'tomato-salad',
-    name: 'Tomato Salad',
-    category: 'SALADS'
+    price: 1,
+    img: 'zephyr',
+    name: 'Zephyr',
+    category: 'PREORDER'
   },
 
   {
     id: 11,
-    price: 15,
-    img: 'feta',
-    name: 'Feta Salad',
-    category: 'SALADS'
+    price: 1,
+    img: 'tiramisu',
+    name: 'Tiramisu',
+    category: 'PREORDER'
   }
 ] 
 

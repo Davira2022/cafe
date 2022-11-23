@@ -1,0 +1,19 @@
+.cart-image {
+    width: 70px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.cart-container {
+    position: relative;
+}
+
+
+.cart-btn {
+    margin-top: 35px;
+}
+
+.cart-button {
+    border: none;
+    background-color: transparent;
+}

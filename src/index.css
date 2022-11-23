@@ -14,20 +14,53 @@ code {
 
 .App {
   display: flex;
-  justify-content: space-around;
 }
 
 body {
-  background-color: #161616;
+  background-color: #2f4454;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  letter-spacing: 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-weight: bolder;
+  border-radius: 20px;
 }
 
 .block {
-  background-color: rgba(255, 255, 255, 0.5);
   padding: 20px;
+  width: 20%;
+  border-left: 5px solid rgba(255, 255, 255, 0.5);
+  color: white;
+  border-radius: 20px;
 }
 
-img {
-  width: 500px;
+.one {
+  display: table;
+  margin: 5px;
+  width: 80%;
+  color: white;
+}
+
+.dish {
+  background: rgba(255, 255, 255, 0.5);
+  border: 10px solid #2f4454;
+  border-radius: 20px;
+  display: inline-block;
+  letter-spacing: 5px;
+}
+
+.dishes {
+  height: 300px;
+  width: 400px;
 }
 
 .cartIcon {
@@ -35,14 +68,14 @@ img {
 }
 
 .categoryButtonSelected {
-  background-color: green;
+  background-color: #da7b93;
 }
 
 .categoryButton:hover {
-  background-color: #fdeb6b;;
+  background-color: #2e151b;
 }
 
-.categoryButton {
+.categoryButton, .btn {
   cursor: pointer;
   margin: 5px;
   padding: 5px;
@@ -52,14 +85,44 @@ img {
   width: 20px;
 }
 
-p, h1, h2, button {
+p, h2, button {
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  color: white;
 }
 
 button {
-  background-color: #fdeb6b;
-  margin-top: 20px;
+  background-color: #da7b93;
+  margin-top: 5px;
   margin-left: 10px;
   padding: 5px;
+  border: none;
+}
+
+.small {
+  width: 150px;
+}
+
+span {
+  padding: 15px;
+}
+
+img {
+  padding: 15px;
+}
+
+.plus {
+  border: none;
+  background: none;
+}
+
+.btn {
+  border-radius: 5px;
+  color: white;
 }
