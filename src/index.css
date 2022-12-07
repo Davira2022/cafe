@@ -144,4 +144,8 @@ img {
     img {
       padding: 5px;
     }
+
+    .small {
+      width: 80px;
+    }
   }
