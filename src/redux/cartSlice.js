@@ -3,12 +3,12 @@ import { createSlice } from '@reduxjs/toolkit';
 export const cartSlice = createSlice({
     name: 'cart',
     initialState: {
-        cartItems: []
+        cartItem: []
     },
     reducers: {
         addItemToCart: (state, action) => {
             const timeId = new Date().getTime()
-            state.cartItems.push({
+            state.cartItem.push({
                 id: timeId,
                 dishId: action.payload.dish.id,
                 quantity: action.payload.quantity,
@@ -19,7 +19,7 @@ export const cartSlice = createSlice({
         updateQuantity: (state, action) => {
             const newCart = [];
             
-            state.cartItems.forEach(item => {
+            state.cartItem.forEach(item => {
                 if (item.dishId === action.payload.dish.id) {
                     let newQuantity = item.quantity + action.payload.quantity;
                     let totalSum = item.price * newQuantity;
@@ -29,31 +29,31 @@ export const cartSlice = createSlice({
                     newCart.push(item);
                 }
             })
-            state.cartItems = newCart;
+            state.cartItem = newCart;
         },
         removeItemFromCart: (state, action) => {
-            state.cartItems = state.cartItems.filter(
+            state.cartItem = state.cartItem.filter(
                 cartItem => cartItem.id !== action.payload.cartItemId
             )
         },
         clearCart: state => {
-            state.cartItems = []
+            state.cartItem = []
         }
     }
 })
 
 export const getTotalPrice = state => {
-    return state.cart.cartItems.reduce((total, cartItems) => {
-        return cartItems.totalPrice + total;
+    return state.cart.cartItem.reduce((total, cartItem) => {
+        return cartItem.totalPrice + total;
     }, 0)
 }
 
 export const getTotalQuantity = state => {
-    return state.cart.cartItems.reduce((total, cartItems) => {
-        return cartItems.quantity + total;
+    return state.cart.cartItem.reduce((total, cartItem) => {
+        return cartItem.quantity + total;
     }, 0)
 }
 
-export const getCartItems = state => state.cart.cartItems;
+export const getCartItems = state => state.cart.cartItem;
 export const { addItemToCart, removeItemFromCart, updateQuantity, clearCart } = cartSlice.actions;
 export default cartSlice.reducer;
