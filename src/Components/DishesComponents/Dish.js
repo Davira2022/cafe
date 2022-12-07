@@ -4,13 +4,15 @@ import { useDispatch, useSelector } from "react-redux";
 import { addItemToCart, getCartItems, updateQuantity } from "../../redux/cartSlice";
 import ChangeQuantity from "../Cart/ChangeQuantity";
 
-const Dish = ({dish}) => {
-    const { name, price, img } = dish;
+function Dish({dish}) {
+    // const { name, price, img } = dish;
     const [quantity, setQuantity] = useState(1);
     const dispatch = useDispatch();
-    const items = useSelector(getCartItems);
+    
+    
+    const cartItems = useSelector(getCartItems);
 
-    const itemsInCart = items.some(item => item.itemId === dish.id);
+    const itemsInCart = cartItems.some(item => item.id === dish.id);
 
     const addToCart = () => {
         if (!itemsInCart) {
@@ -18,14 +20,14 @@ const Dish = ({dish}) => {
             setQuantity(1)
         } else {
             dispatch(updateQuantity({dish, quantity}))
-            setQuantity(1)
+            // setQuantity(1)
         }
     }
 
     return(<div className="dish">
-        <img className="dishes" src={`./${img}.jpg`} alt="food"/>
-        <h2>{name}</h2>
-        <p>$ {price}</p>
+        <img className="dishes" src={`${dish.img}.jpg`} alt="food"/>
+        <h2>{dish.name}</h2>
+        <p>$ {dish.price}</p>
         <ChangeQuantity quantity = {quantity} setQuantity={setQuantity}/>
         <button onClick={addToCart}>Add To Cart</button>
     </div>)

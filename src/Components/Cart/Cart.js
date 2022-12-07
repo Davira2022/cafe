@@ -5,15 +5,13 @@ import CartItem from '../Cart/CartItem';
 
 
 import './cart.css';
-
 import shoppingBag from './shopping-bag.png';
 
 const Cart = () => {
-
     const cartItems = useSelector(getCartItems);
     const totalPrice = useSelector(getTotalPrice);
     const quantity = useSelector(getTotalQuantity);
-    const [isActive, setIsActive] = useState(false);
+    const [isActive, setIsActive] = useState(true);
 
     const checkCartnotEmpty = () => {
         if (quantity === 0) {
@@ -36,7 +34,7 @@ const onCartHide = () => {
 return (
     <div className='cart-btn'>
         <p className='item-total'>TOTAL: ${totalPrice}</p>
-        <p>TOTAL ITEMS: {quantity}</p>
+        <p>TOTAL CATEGORIES: {quantity}</p>
         <div className="cart-container">
             <button onClick={onCartHide} className='cart-button'>
                 <img src={shoppingBag} alt="shopping bag" className="cart-image" />
